@@ -4,7 +4,7 @@ A focused Python/Streamlit project for simulating an ideal two-body orbit around
 
 ## Live application
 
-The application is prepared for Streamlit Community Cloud. The public deployment URL will be added here after the first account-authorized deployment completes.
+
 
 ## What it does
 
