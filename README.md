@@ -4,7 +4,11 @@ A focused Python/Streamlit project for simulating an ideal two-body orbit around
 
 ## Live application
 
+**[Launch Space Orbit Lab](https://space-orbit-lab.streamlit.app/)**
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://space-orbit-lab.streamlit.app/)
+
+The hosted application is deployed from `main` on Streamlit Community Cloud. New commits to that branch are deployed automatically.
 
 ## What it does
 
