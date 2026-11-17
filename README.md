@@ -2,6 +2,10 @@
 
 A focused Python/Streamlit project for simulating an ideal two-body orbit around Earth or Mars. It is the space module extracted from Virtual Universe Lab so it can evolve independently.
 
+## Live application
+
+The application is prepared for Streamlit Community Cloud. The public deployment URL will be added here after the first account-authorized deployment completes.
+
 ## What it does
 
 - Integrates a three-dimensional orbit with SciPy's DOP853 solver.
@@ -34,8 +38,22 @@ The CLI writes the complete result, checks, time-series channels, and metadata a
 ## Tests
 
 ```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m pytest -q
 ```
+
+## Streamlit Community Cloud deployment
+
+The repository includes pinned runtime dependencies and a production Streamlit theme. Create the app in [Streamlit Community Cloud](https://share.streamlit.io/) with:
+
+| Setting | Value |
+|---|---|
+| Repository | `yuvrajsinghdrmlau/space-orbit-lab` |
+| Branch | `main` |
+| Entrypoint | `app.py` |
+| Python | `3.12` |
+
+No secrets or environment variables are required. Because the GitHub repository is private, the Streamlit account must be authorized to access private repositories. Every later push to `main` will trigger an automatic app update.
 
 ## Project layout
 
@@ -43,6 +61,9 @@ The CLI writes the complete result, checks, time-series channels, and metadata a
 app.py              Streamlit interface and charts
 cli.py              Command-line interface
 model.py            Numerical model and validation
+requirements.txt    Cloud/runtime dependencies
+requirements-dev.txt Test-only dependencies
+.streamlit/config.toml Hosted app theme and server settings
 tests/test_model.py Core regression tests
 ```
 
